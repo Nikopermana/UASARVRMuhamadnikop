@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HOME</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src=" https://rawgit.com/aframevr/aframe/b395ea0/dist/aframe-master.min.jss"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="FarmModel3" src="scene.gltf"></a-asset-item>
+      </a-assets> 
+      <a-gltf-model src="#FarmModel3" animation-mixer></a-gltf-model>
+      <a-sky src="images/langit.jpeg"></a-sky>
+    </a-scene>
+  </body>
+</html>

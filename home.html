@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>HOME</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.4/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.1.2/dist/aframe-event-set-component.min.js"></script>
+    <script src="js/components/aframe-tooltip-component.js"></script>
+    <script src="js/components/camera-position.js"></script>
+    <script src="js/components/link-controls.js"></script>
+</head>
+<body>
+<a-scene background="color: #333"
+         raycaster="far: 100; objects: [link];"
+         cursor="rayOrigin: mouse">
+    <a-assets>
+        <img id="sunnygo" crossOrigin="anonymous" src="assets/images/sunny.jpg">
+        <img id="Earth" crossOrigin="anonymous" src="assets/images/earth.png">
+        <a-asset-item id="animeclass" src="assets/models/animeclass/sceneclass.gltf"></a-asset-item>
+        <a-asset-item id="Image" src="assets/images/fox.jpg"></a-asset-item>
+        <a-asset-item id="Fox" src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/Fox/glTF/Fox.gltf"></a-asset-item>
+    </a-assets>
+    <a-text font="monoid" value="MY class" width="9" position="-1.25 2.0 -1.0"></a-text>
+    <a-link href="sunnygo.html" title="SunnyGo" font="monoid" position="6.0 1.5 -5.75" image="#sunnygo"></a-link>
+    <a-link href="earth.html" title="EARTH" font="monoid" position="3.0 1.5 -5.75" image="#Earth"></a-link>
+    <a-link href="image_tracking.html" title="WHAT IS A Anime?" font="monoid" position="-7.75 1.5 -5.75" scale="0.4 0.4 0.4" image="#Image"></a-link>
+    <a-gltf-model src="#animeclass" animation-mixer></a-gltf-model>
+    <a-entity gltf-model="#Fox" position="-8.9 1.3 -3" scale="0.01 0.01 0.01" animation-mixer></a-entity>
+    <a-entity gltf-model="#Fox" position="-5.5 1.3 -3" scale="0.005 0.005 0.005" animation-mixer></a-entity>
+    <a-entity id="leftHand" link-controls="hand: left"></a-entity>
+    <a-entity id="rightHand" link-controls="hand: right"></a-entity>
+    <a-sky src="assets/images/sky.jpeg"></a-sky>
+</a-scene>
+</body> 
+</html>
